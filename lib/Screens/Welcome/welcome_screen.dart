@@ -17,13 +17,18 @@ class WelcomeScreen extends StatelessWidget {
           alignment: Alignment.center,
           decoration: const BoxDecoration(
               gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [SpaceColor, SkyColor],
-          )),
+              begin: Alignment.centerRight,
+              end: Alignment.centerLeft,
+              colors: [SpaceColor, SkyColor],
+            )
+          ),
           child: Stack(
             alignment: Alignment.center,
             children: <Widget>[
+              Positioned(
+                top: 0,
+                child: Lottie.asset('lottie/space.json')
+              ),
               Positioned(
                 top: size.height * 0.2,
                 child: SizedBox(
@@ -38,7 +43,10 @@ class WelcomeScreen extends StatelessWidget {
                           gradient: const LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
-                            colors: [Color.fromARGB(255, 245, 243, 255), Color.fromARGB(255, 236, 236, 255)],
+                            colors: [
+                              Color.fromARGB(255, 245, 243, 255),
+                              Color.fromARGB(255, 236, 236, 255)
+                            ],
                           ),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(20)),
@@ -57,86 +65,141 @@ class WelcomeScreen extends StatelessWidget {
                           children: <Widget>[
                             const SizedBox(height: 50),
                             RichText(
-                              text: const TextSpan(
-                                text: '',
-                                style: TextStyle(fontSize: 18, fontFamily: 'Daruma'), 
-                                children: <TextSpan>[
-                                  TextSpan(text: 'V', style: TextStyle(color: Pink)),
-                                  TextSpan(text: 'e', style: TextStyle(color: Blue)),
-                                  TextSpan(text: 'n', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 'h', style: TextStyle(color: LGreen)),
-                                  TextSpan(text: 'a', style: TextStyle(color: Yellow)),
-                                  TextSpan(text: ' '),
-                                  TextSpan(text: 'c', style: TextStyle(color: Red)),
-                                  TextSpan(text: 'o', style: TextStyle(color: Black)),
-                                  TextSpan(text: 'n', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 'h', style: TextStyle(color: Pink)),
-                                  TextSpan(text: 'e', style: TextStyle(color: Orange)),
-                                  TextSpan(text: 'c', style: TextStyle(color: Pink)),
-                                  TextSpan(text: 'e', style: TextStyle(color: Blue)),
-                                  TextSpan(text: 'r', style: TextStyle(color: Brown)),
-                                  TextSpan(text: ' '),
-                                  TextSpan(text: 'o', style: TextStyle(color: Blue)),
-                                  TextSpan(text: ' '),
-                                  TextSpan(text: 'e', style: TextStyle(color: LGreen)),
-                                  TextSpan(text: 's', style: TextStyle(color: Yellow)),
-                                  TextSpan(text: 'p', style: TextStyle(color: Red)),
-                                  TextSpan(text: 'a', style: TextStyle(color: Black)),
-                                  TextSpan(text: 'ç', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 'o', style: TextStyle(color: Pink)),
-                                  TextSpan(text: '!', style: TextStyle(color: Orange)),
-                                ],
-                              )
-                            ),
+                                text: const TextSpan(
+                              text: '',
+                              style:
+                                  TextStyle(fontSize: 18, fontFamily: 'Daruma'),
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text: 'V', style: TextStyle(color: Pink)),
+                                TextSpan(
+                                    text: 'e', style: TextStyle(color: Blue)),
+                                TextSpan(
+                                    text: 'n', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 'h', style: TextStyle(color: LGreen)),
+                                TextSpan(
+                                    text: 'a', style: TextStyle(color: Yellow)),
+                                TextSpan(text: ' '),
+                                TextSpan(
+                                    text: 'c', style: TextStyle(color: Red)),
+                                TextSpan(
+                                    text: 'o', style: TextStyle(color: Black)),
+                                TextSpan(
+                                    text: 'n', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 'h', style: TextStyle(color: Pink)),
+                                TextSpan(
+                                    text: 'e', style: TextStyle(color: Orange)),
+                                TextSpan(
+                                    text: 'c', style: TextStyle(color: Pink)),
+                                TextSpan(
+                                    text: 'e', style: TextStyle(color: Blue)),
+                                TextSpan(
+                                    text: 'r', style: TextStyle(color: Brown)),
+                                TextSpan(text: ' '),
+                                TextSpan(
+                                    text: 'o', style: TextStyle(color: Blue)),
+                                TextSpan(text: ' '),
+                                TextSpan(
+                                    text: 'e', style: TextStyle(color: LGreen)),
+                                TextSpan(
+                                    text: 's', style: TextStyle(color: Yellow)),
+                                TextSpan(
+                                    text: 'p', style: TextStyle(color: Red)),
+                                TextSpan(
+                                    text: 'a', style: TextStyle(color: Black)),
+                                TextSpan(
+                                    text: 'ç', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 'o', style: TextStyle(color: Pink)),
+                                TextSpan(
+                                    text: '!', style: TextStyle(color: Orange)),
+                              ],
+                            )),
                             const SizedBox(height: 25),
                             RichText(
-                              text: const TextSpan(
-                                text: '',
-                                style: TextStyle(fontSize: 18, fontFamily: 'Daruma'), 
-                                children: <TextSpan>[
-                                  TextSpan(text: 'P', style: TextStyle(color: Pink)),
-                                  TextSpan(text: 'r', style: TextStyle(color: Blue)),
-                                  TextSpan(text: 'e', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 's', style: TextStyle(color: LGreen)),
-                                  TextSpan(text: 's', style: TextStyle(color: Yellow)),
-                                  TextSpan(text: 'i', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 'o', style: TextStyle(color: Black)),
-                                  TextSpan(text: 'n', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 'e', style: TextStyle(color: Orange)),
-                                  TextSpan(text: ' '),
-                                  TextSpan(text: 'o', style: TextStyle(color: Blue)),
-                                  TextSpan(text: ' '),
-                                  TextSpan(text: 'p', style: TextStyle(color: LGreen)),
-                                  TextSpan(text: 'a', style: TextStyle(color: Yellow)),
-                                  TextSpan(text: 'r', style: TextStyle(color: Red)),
-                                  TextSpan(text: 'a', style: TextStyle(color: Black)),
-                                  TextSpan(text: ' '),
-                                  TextSpan(text: 'c', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 'o', style: TextStyle(color: Pink)),
-                                  TextSpan(text: 'm', style: TextStyle(color: Orange)),
-                                  TextSpan(text: 'e', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 'ç', style: TextStyle(color: Pink)),
-                                  TextSpan(text: 'a', style: TextStyle(color: Orange)),
-                                  TextSpan(text: 'r', style: TextStyle(color: Black)),
-                                  TextSpan(text: ' '),
-                                  TextSpan(text: 'a', style: TextStyle(color: Red)),
-                                  TextSpan(text: ' '),
-                                  TextSpan(text: 'n', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 'o', style: TextStyle(color: Pink)),
-                                  TextSpan(text: 's', style: TextStyle(color: Orange)),
-                                  TextSpan(text: 's', style: TextStyle(color: Black)),
-                                  TextSpan(text: 'a', style: TextStyle(color: Pink)),
-                                  TextSpan(text: ' '),
-                                  TextSpan(text: 'v', style: TextStyle(color: LGreen)),
-                                  TextSpan(text: 'i', style: TextStyle(color: Yellow)),
-                                  TextSpan(text: 'a', style: TextStyle(color: Red)),
-                                  TextSpan(text: 'g', style: TextStyle(color: Black)),
-                                  TextSpan(text: 'e', style: TextStyle(color: LBlue)),
-                                  TextSpan(text: 'm', style: TextStyle(color: Pink)),
-                                  TextSpan(text: '!', style: TextStyle(color: Orange)),
-                                ],
-                              )
-                            ),
+                                text: const TextSpan(
+                              text: '',
+                              style:
+                                  TextStyle(fontSize: 18, fontFamily: 'Daruma'),
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text: 'P', style: TextStyle(color: Pink)),
+                                TextSpan(
+                                    text: 'r', style: TextStyle(color: Blue)),
+                                TextSpan(
+                                    text: 'e', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 's', style: TextStyle(color: LGreen)),
+                                TextSpan(
+                                    text: 's', style: TextStyle(color: Yellow)),
+                                TextSpan(
+                                    text: 'i', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 'o', style: TextStyle(color: Black)),
+                                TextSpan(
+                                    text: 'n', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 'e', style: TextStyle(color: Orange)),
+                                TextSpan(text: ' '),
+                                TextSpan(
+                                    text: 'o', style: TextStyle(color: Blue)),
+                                TextSpan(text: ' '),
+                                TextSpan(
+                                    text: 'p', style: TextStyle(color: LGreen)),
+                                TextSpan(
+                                    text: 'a', style: TextStyle(color: Yellow)),
+                                TextSpan(
+                                    text: 'r', style: TextStyle(color: Red)),
+                                TextSpan(
+                                    text: 'a', style: TextStyle(color: Black)),
+                                TextSpan(text: ' '),
+                                TextSpan(
+                                    text: 'c', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 'o', style: TextStyle(color: Pink)),
+                                TextSpan(
+                                    text: 'm', style: TextStyle(color: Orange)),
+                                TextSpan(
+                                    text: 'e', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 'ç', style: TextStyle(color: Pink)),
+                                TextSpan(
+                                    text: 'a', style: TextStyle(color: Orange)),
+                                TextSpan(
+                                    text: 'r', style: TextStyle(color: Black)),
+                                TextSpan(text: ' '),
+                                TextSpan(
+                                    text: 'a', style: TextStyle(color: Red)),
+                                TextSpan(text: ' '),
+                                TextSpan(
+                                    text: 'n', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 'o', style: TextStyle(color: Pink)),
+                                TextSpan(
+                                    text: 's', style: TextStyle(color: Orange)),
+                                TextSpan(
+                                    text: 's', style: TextStyle(color: Black)),
+                                TextSpan(
+                                    text: 'a', style: TextStyle(color: Pink)),
+                                TextSpan(text: ' '),
+                                TextSpan(
+                                    text: 'v', style: TextStyle(color: LGreen)),
+                                TextSpan(
+                                    text: 'i', style: TextStyle(color: Yellow)),
+                                TextSpan(
+                                    text: 'a', style: TextStyle(color: Red)),
+                                TextSpan(
+                                    text: 'g', style: TextStyle(color: Black)),
+                                TextSpan(
+                                    text: 'e', style: TextStyle(color: LBlue)),
+                                TextSpan(
+                                    text: 'm', style: TextStyle(color: Pink)),
+                                TextSpan(
+                                    text: '!', style: TextStyle(color: Orange)),
+                              ],
+                            )),
                           ],
                         )),
                   ],
@@ -147,9 +210,10 @@ class WelcomeScreen extends StatelessWidget {
                 child: SizedBox(
                     height: 200,
                     child: SimpleShadow(
-                      child: Lottie.asset('lottie/soldier-on-rocket.json'),
+                      child: Lottie.asset('lottie/human-space.json'),
                     )),
               ),
+              
             ],
           ),
         ),

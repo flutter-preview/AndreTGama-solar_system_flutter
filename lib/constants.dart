@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-const SpaceColor = Color.fromARGB(255, 68, 6, 97);
-const SkyColor = Color.fromARGB(255, 8, 117, 206);
+const SpaceColor = Color.fromARGB(255, 38, 26, 92);
+const SkyColor = Color.fromARGB(255, 45, 29, 97);
 
 const Pink = Color.fromARGB(255, 235, 0, 194);
 const Blue = Color.fromARGB(255, 22, 30, 242);
