@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:simple_shadow/simple_shadow.dart';
+import 'package:solar_system_app/Components/Buttons/button_rounded.dart';
 import 'package:solar_system_app/constants.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -17,18 +18,14 @@ class WelcomeScreen extends StatelessWidget {
           alignment: Alignment.center,
           decoration: const BoxDecoration(
               gradient: LinearGradient(
-              begin: Alignment.centerRight,
-              end: Alignment.centerLeft,
-              colors: [SpaceColor, SkyColor],
-            )
-          ),
+            begin: Alignment.centerRight,
+            end: Alignment.centerLeft,
+            colors: [SpaceColor, SkyColor],
+          )),
           child: Stack(
             alignment: Alignment.center,
             children: <Widget>[
-              Positioned(
-                top: 0,
-                child: Lottie.asset('lottie/space.json')
-              ),
+              Positioned(top: 0, child: Lottie.asset('lottie/space.json')),
               Positioned(
                 top: size.height * 0.2,
                 child: SizedBox(
@@ -213,7 +210,18 @@ class WelcomeScreen extends StatelessWidget {
                       child: Lottie.asset('lottie/human-space.json'),
                     )),
               ),
-              
+              Positioned(
+                  top: size.height * 0.67,
+                  child: ButtonRounded(text: 'Vamos Nessa!!!', press: () {
+                    //   Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context){
+                    //       return LoginScreen();
+                    //     },
+                    //   ),
+                    // );
+                  })),
             ],
           ),
         ),
