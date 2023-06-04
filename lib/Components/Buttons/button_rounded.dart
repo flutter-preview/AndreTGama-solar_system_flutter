@@ -11,7 +11,8 @@ class ButtonRounded extends StatelessWidget {
       required this.text,
       required this.press,
       this.color = SkyColor,
-      this.textColor = Colors.white})
+      this.textColor = Colors.white
+      })
       : super(key: key);
 
   @override
