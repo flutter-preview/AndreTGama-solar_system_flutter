@@ -4,7 +4,7 @@ const SpaceColor = Color.fromARGB(255, 38, 26, 92);
 const SkyColor = Color.fromARGB(255, 45, 29, 97);
 
 const Pink = Color.fromARGB(255, 235, 0, 194);
-const Blue = Color.fromARGB(255, 22, 30, 242);
+const Blue = Color.fromARGB(255, 65, 71, 247);
 const LBlue = Color.fromARGB(255, 31, 219, 194);
 const LGreen = Color.fromARGB(255, 104, 242, 22);
 const Green = Color.fromARGB(255, 2, 245, 16);
