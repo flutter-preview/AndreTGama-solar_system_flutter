@@ -1,7 +1,7 @@
 class PlanetsModel {
-  String? name;
+  late String name;
   String? description;
-  String? image;
+  late String image;
   String? diameter;
   String? weight;
   String? distanceSun;
@@ -13,9 +13,9 @@ class PlanetsModel {
   String? curiosity;
 
   PlanetsModel({
-    this.name,
+    required this.name,
     this.description,
-    this.image,
+    required this.image,
     this.diameter,
     this.weight,
     this.distanceSun,

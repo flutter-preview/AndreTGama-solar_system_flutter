@@ -25,7 +25,7 @@ class BackgroundMain extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                margin: const EdgeInsets.only(top: 50.0, bottom: 50.0),
+                margin: const EdgeInsets.only(top: 50.0),
                 padding: const EdgeInsets.all(20.0),
                 child: const Text(
                   'Espaço Explorar',

@@ -23,7 +23,7 @@ class CardComoponet extends StatelessWidget {
         Container(
           height: size.height * 0.5,
           width: size.width * 0.7,
-          margin: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+          margin: const EdgeInsets.only(top: 10.0, bottom: 20.0),
           padding: const EdgeInsets.all(20.0),
           decoration: BoxDecoration(
             gradient: const LinearGradient(

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:solar_system_app/Components/Cards/card_comoponet.dart';
 import 'package:solar_system_app/Components/background_main.dart';
 import 'package:solar_system_app/Model/PlanetsModel.dart';
@@ -10,26 +11,36 @@ class SolarSystemScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+
     return FutureBuilder(
       future: ReadJsonData(),
       builder: (context, data) {
         if (data.hasError) {
-          print('if');
           return Center(child: Text("${data.error}"));
         } else if (data.hasData) {
           var items = data.data as List<PlanetsModel>;
-          print('else if');
+          var dataCards = items.map((i) {
+            return Builder(
+              builder: (BuildContext context) {
+                return CardComoponet(text: i.name, image: i.image);
+              },
+            );
+          }).toList();
           return BackgroundMain(
-            child: ListView.builder(itemBuilder: (context, index) {
-              return CardComoponet(
-                text: items[index].name.toString(),
-                image: "assets/images/sistema-solar/venus.png",
-              );
-            }),
-          );
+              child: CarouselSlider(
+            options: CarouselOptions(
+              height: 400,
+              viewportFraction: 0.6,
+              enableInfiniteScroll: true,
+              autoPlay: false,
+              autoPlayCurve: Curves.fastOutSlowIn,
+              enlargeCenterPage: true,
+              enlargeFactor: 0.3,
+              scrollDirection: Axis.horizontal,
+            ),
+            items: dataCards,
+          ));
         } else {
-          print('else');
           return const Center(
             child: CircularProgressIndicator(),
           );
