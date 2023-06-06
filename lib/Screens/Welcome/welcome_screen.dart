@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 import 'package:solar_system_app/Components/Buttons/button_rounded.dart';
+import 'package:solar_system_app/Screens/SolarSystem/solar_system_screen.dart';
 import 'package:solar_system_app/constants.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -213,14 +214,14 @@ class WelcomeScreen extends StatelessWidget {
               Positioned(
                   top: size.height * 0.67,
                   child: ButtonRounded(text: 'Vamos Nessa!!!', press: () {
-                    //   Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context){
-                    //       return LoginScreen();
-                    //     },
-                    //   ),
-                    // );
+                      Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context){
+                          return const SolarSystemScreen();
+                        },
+                      ),
+                    );
                   })),
             ],
           ),

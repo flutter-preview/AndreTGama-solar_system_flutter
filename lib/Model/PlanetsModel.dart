@@ -1,30 +1,30 @@
 class PlanetsModel {
   late String name;
-  String? description;
+  late String description;
   late String image;
-  String? diameter;
-  String? weight;
-  String? distanceSun;
-  String? gravity;
-  String? rotation;
-  String? translation;
-  String? temperature;
-  List<dynamic>? satellite;
-  String? curiosity;
+  late String diameter;
+  late String weight;
+  late String distanceSun;
+  late String gravity;
+  late String rotation;
+  late String translation;
+  late String temperature;
+  late List<dynamic> satellite;
+  late String curiosity;
 
   PlanetsModel({
     required this.name,
-    this.description,
+    required this.description,
     required this.image,
-    this.diameter,
-    this.weight,
-    this.distanceSun,
-    this.gravity,
-    this.rotation,
-    this.translation,
-    this.temperature,
-    this.satellite,
-    this.curiosity,
+    required this.diameter,
+    required this.weight,
+    required this.distanceSun,
+    required this.gravity,
+    required this.rotation,
+    required this.translation,
+    required this.temperature,
+    required this.satellite,
+    required this.curiosity,
   });
 
   PlanetsModel.fromJson(Map<String, dynamic> json )

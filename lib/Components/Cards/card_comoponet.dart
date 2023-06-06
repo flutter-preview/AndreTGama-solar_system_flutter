@@ -17,21 +17,22 @@ class CardComoponet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    
     return Stack(
       alignment: Alignment.center,
       children: <Widget>[
         Container(
-          height: size.height * 0.5,
+          height: 350,
           width: size.width * 0.7,
           margin: const EdgeInsets.only(top: 10.0, bottom: 20.0),
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.fromLTRB(20, 80, 20, 5),
           decoration: BoxDecoration(
             gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color.fromARGB(255, 245, 243, 255),
-                Color.fromARGB(255, 236, 236, 255)
+                Colors.white,
+                Colors.white
               ],
             ),
             borderRadius: const BorderRadius.all(Radius.circular(20)),
@@ -44,9 +45,39 @@ class CardComoponet extends StatelessWidget {
               ),
             ],
           ),
-          child: const Text('text'),
+          child: Text(
+            text,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 6,
+            style: const TextStyle(
+              fontSize: 24,
+              fontFamily: 'Daruma',
+              color: Color.fromARGB(255, 32, 32, 32)
+            ),
+          ),
         ),
-        Positioned(top: 0, child: Image.asset(image)),
+        Positioned(
+          top: 25,
+          child: SimpleShadow(
+            sigma: 10,
+            child: Image.asset(image),
+          ),
+        ),
+        Positioned(
+          bottom: 75,
+          child: RawMaterialButton(
+            onPressed: () {},
+            elevation: 2.0,
+            fillColor: Colors.white,
+            padding: const EdgeInsets.all(2.0),
+            shape: const CircleBorder(),
+            child: const Icon(
+              Icons.arrow_circle_right,
+              color: Colors.yellow,
+              size: 50,
+            ),
+          ),
+        ),
       ],
     );
   }

@@ -22,14 +22,14 @@ class SolarSystemScreen extends StatelessWidget {
           var dataCards = items.map((i) {
             return Builder(
               builder: (BuildContext context) {
-                return CardComoponet(text: i.name, image: i.image);
+                return CardComoponet(text: i.description, image: i.image);
               },
             );
           }).toList();
           return BackgroundMain(
               child: CarouselSlider(
             options: CarouselOptions(
-              height: 400,
+              height: 550,
               viewportFraction: 0.6,
               enableInfiniteScroll: true,
               autoPlay: false,

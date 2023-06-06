@@ -11,6 +11,7 @@
         "translation": "88 dias",
         "temperature": "179 ºC.",
         "satellite": [],
+        "color": "964b00",
         "curiosity": "Mercúrio é o planeta mais próximo do Sol e tem uma órbita bastante excêntrica. Ele é coberto por crateras, devido à intensa atividade de impactos meteoríticos."
     },
     {
@@ -25,6 +26,7 @@
         "translation": "224 dias",
         "temperature": "482 ºC.",
         "satellite": [],
+        "color": "964b00",
         "curiosity": "Uma curiosidade particular de Vênus é em relação aos movimentos de rotação e translação, em que um dia nesse planeta é maior que um ano. Outra curiosidade é que o planeta gira em sentido oposto da terra, de oeste para o leste"
     },
     {
@@ -39,6 +41,7 @@
         "translation": "365 dias 5 horas e 48 minutos",
         "temperature": "14 ºC.",
         "satellite": ["Lua"],
+        "color": "964b00",
         "curiosity": "A rotação da Terra diminui gradualmente, contudo, de maneira praticamente imperceptível aos seres humanos. Essa diminuição é de aproximadamente 17 milissegundos a cada 100 anos e provoca o aumento da duração do dia."
     },
     {
@@ -53,6 +56,7 @@
         "translation": "687 dias",
         "temperature": "-62,77 ºC",
         "satellite": ["Phobos", "Deimos"],
+        "color": "964b00",
         "curiosity": "O nome Marte é derivado do deus romano da guerra em decorrência de sua coloração avermelhada. As luas Phobos (que significa medo) e Deimos (fobia) receberam o mesmo nome dos cavalos que puxavam a carruagem do deus Ares, o deus da guerra na mitologia grega"
     },
     {
@@ -67,6 +71,7 @@
         "translation": "12 anos",
         "temperature": "-121,1 °C",
         "satellite": ["Ganímedes", "Calisto", "Io", "Europa"],
+        "color": "964b00",
         "curiosity": "O nome Marte é derivado do deus romano da guerra em decorrência de sua coloração avermelhada. As luas Phobos (que significa medo) e Deimos (fobia) receberam o mesmo nome dos cavalos que puxavam a carruagem do deus Ares, o deus da guerra na mitologia grega"
     },
     {
@@ -81,6 +86,7 @@
         "translation": "29,4 anos terrestres.",
         "temperature": "-138 °C",
         "satellite": ["Titã", "Encélado", "Mimas", "Dione"],
+        "color": "964b00",
         "curiosity": "As luas Titã e Encélado têm grande potencial para abrigar vida, uma vez que possuem água e diferentes tipos de hidrocarbonetos em suas composições."
     },
     {
@@ -95,6 +101,7 @@
         "translation": "84 anos terrestres",
         "temperature": "-197 °C",
         "satellite": ["Titânia", "Oberon", "Umbriel", "Miranda", "Ariel."],
+        "color": "964b00",
         "curiosity": "Desde a sua descoberta oficial, o planeta completou apenas duas voltas em torno do Sol. A terceira será em 2033. Rotaciona de lado devido à inclinação do seu eixo. Esse movimento se dá de leste para oeste."
     },
     {
@@ -117,6 +124,7 @@
             "Hipocampo",
             "Proteu"
         ],
+        "color": "964b00",
         "curiosity": "Netuno é o único planeta do Sistema Solar que não é visível a olho nu."
     }
 ]
