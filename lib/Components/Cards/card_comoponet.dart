@@ -60,7 +60,7 @@ class CardComoponet extends StatelessWidget {
           top: 25,
           child: SimpleShadow(
             sigma: 10,
-            child: Image.asset(image),
+            child: Image.asset(image, height: 100,),
           ),
         ),
         Positioned(
