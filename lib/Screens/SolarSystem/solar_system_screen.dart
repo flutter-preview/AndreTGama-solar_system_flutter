@@ -18,11 +18,11 @@ class SolarSystemScreen extends StatelessWidget {
         if (data.hasError) {
           return Center(child: Text("${data.error}"));
         } else if (data.hasData) {
-          var items = data.data as List<PlanetsModel>;
-          var dataCards = items.map((i) {
+          var planets = data.data as List<PlanetsModel>;
+          var dataCards = planets.map((planet) {
             return Builder(
               builder: (BuildContext context) {
-                return CardComoponet(text: i.description, image: i.image);
+                return CardComoponet(planet: planet);
               },
             );
           }).toList();

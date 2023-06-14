@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:simple_shadow/simple_shadow.dart';
+import 'package:solar_system_app/Model/PlanetsModel.dart';
+import 'package:solar_system_app/Screens/Planet/planet_screen.dart';
 import 'package:solar_system_app/constants.dart';
 
 class CardComoponet extends StatelessWidget {
-  final String text;
-  final String image;
+  final PlanetsModel planet;
   final Color color, textColor;
 
   const CardComoponet(
-      {required this.text,
-      required this.image,
+    {
+      required this.planet,
       this.color = SkyColor,
       this.textColor = Colors.white,
-      super.key});
+      super.key
+    }
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +49,7 @@ class CardComoponet extends StatelessWidget {
             ],
           ),
           child: Text(
-            text,
+            planet.description,
             overflow: TextOverflow.ellipsis,
             maxLines: 6,
             style: const TextStyle(
@@ -57,16 +60,25 @@ class CardComoponet extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 25,
+          top: 15,
           child: SimpleShadow(
             sigma: 10,
-            child: Image.asset(image, height: 100,),
+            child: Image.asset(planet.image, height: size.height * 0.3,),
           ),
         ),
         Positioned(
           bottom: 75,
           child: RawMaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context){
+                    return PlanetScreen(planet: planet);
+                  },
+                ),
+              );
+            },
             elevation: 2.0,
             fillColor: Colors.white,
             padding: const EdgeInsets.all(2.0),
