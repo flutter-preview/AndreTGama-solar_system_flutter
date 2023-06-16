@@ -1,4 +1,5 @@
 class PlanetsModel {
+  late int id;
   late String name;
   late String description;
   late String image;
@@ -11,8 +12,10 @@ class PlanetsModel {
   late String temperature;
   late List<dynamic> satellite;
   late String curiosity;
+  late List<dynamic> photos;
 
   PlanetsModel({
+    required this.id,
     required this.name,
     required this.description,
     required this.image,
@@ -25,10 +28,12 @@ class PlanetsModel {
     required this.temperature,
     required this.satellite,
     required this.curiosity,
+    required this.photos,
   });
 
   PlanetsModel.fromJson(Map<String, dynamic> json )
   {
+    id = json['id'];
     name = json['name'];
     description = json['description'];
     image = json['image'];
@@ -41,5 +46,6 @@ class PlanetsModel {
     temperature = json['temperature'];
     satellite = json['satellite'];
     curiosity = json['curiosity'];
+    photos = json['photos'];
   }
 }
