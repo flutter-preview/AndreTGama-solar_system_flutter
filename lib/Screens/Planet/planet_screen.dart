@@ -14,34 +14,33 @@ class PlanetScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      body: Center(
-        child: Container(
-          height: size.height,
-          width: size.width,
-          alignment: Alignment.center,
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Stack(
-              alignment: Alignment.center, 
-              children: <Widget>[
-              Positioned(
+        body: SafeArea(
+      child: SizedBox(
+        height: size.height,
+        width: size.width,
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Stack(children: <Widget>[
+            Positioned(
                 top: 5,
                 left: 0,
                 child: Text(planet.id.toString(),
-                  style: const TextStyle(
-                    fontSize: 300,
-                    color: Color.fromARGB(255, 223, 223, 223)
-                  )
-                )
-              ),
-              Positioned(
-                top: -30,
-                right: -50,
-                child: Image.asset(planet.image)
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 20, top: 32),
-                child: Column(
+                    style: const TextStyle(
+                        fontSize: 300,
+                        color: Color.fromARGB(255, 223, 223, 223)))),
+            Positioned(
+              top: -30,
+              right: -50,
+              child: Hero(tag: planet.id, child: Image.asset(planet.image)),
+            ),
+            IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.arrow_back_ios_new)),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20, top: 32),
+              child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(
@@ -57,7 +56,7 @@ class PlanetScreen extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                     const Text(
-                      "Sistema Solar",
+                      'Sistema Solar',
                       style: TextStyle(
                           fontSize: 30,
                           fontFamily: 'Daruma',
@@ -91,8 +90,7 @@ class PlanetScreen extends StatelessWidget {
                         title: 'Diâmetro',
                         description: planet.diameter.toString()),
                     GeneralCharacteristics(
-                        title: 'Massa',
-                        description: planet.weight.toString()),
+                        title: 'Massa', description: planet.weight.toString()),
                     GeneralCharacteristics(
                         title: 'Distância do Sol',
                         description: planet.distanceSun.toString()),
@@ -168,13 +166,11 @@ class PlanetScreen extends StatelessWidget {
                     const SizedBox(
                       height: 30,
                     ),
-                  ]
-                ),
-              )
-            ]
-          ),
+                  ]),
+            )
+          ]),
         ),
-      ),)
-    );
+      ),
+    ));
   }
 }

@@ -61,9 +61,12 @@ class CardComoponet extends StatelessWidget {
         ),
         Positioned(
           top: 15,
-          child: SimpleShadow(
-            sigma: 10,
-            child: Image.asset(planet.image, height: size.height * 0.3,),
+          child: Hero(
+            tag: planet.id,
+            child: SimpleShadow(
+              sigma: 10,
+              child: Image.asset(planet.image, height: size.height * 0.3,)
+            ),
           ),
         ),
         Positioned(
@@ -72,11 +75,19 @@ class CardComoponet extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context){
-                    return PlanetScreen(planet: planet);
+                PageRouteBuilder(
+                  opaque: false,
+                  pageBuilder: (context, a, b) => PlanetScreen(planet: planet),
+                  transitionsBuilder: (BuildContext context,
+                      Animation<double> animation,
+                      Animation<double> secondaryAnimation,
+                      Widget child) {
+                    return FadeTransition(
+                      opacity: animation,
+                      child: child,
+                    );
                   },
-                ),
+                )
               );
             },
             elevation: 2.0,
