@@ -213,16 +213,27 @@ class WelcomeScreen extends StatelessWidget {
               ),
               Positioned(
                   top: size.height * 0.67,
-                  child: ButtonRounded(text: 'Vamos Nessa!!!', press: () {
-                      Navigator.push(
+                  child: ButtonRounded(text: 'Vamos Nessa!!!',
+                  press: () {
+                    Navigator.push(
                       context,
-                      MaterialPageRoute(
-                        builder: (context){
-                          return const SolarSystemScreen();
+                      PageRouteBuilder(
+                        opaque: false,
+                        pageBuilder: (context, a, b) => const SolarSystemScreen(),
+                        transitionsBuilder: (BuildContext context,
+                            Animation<double> animation,
+                            Animation<double> secondaryAnimation,
+                            Widget child) {
+                          return FadeTransition(
+                            opacity: animation,
+                            child: child,
+                          );
                         },
-                      ),
+                      )
                     );
-                  })),
+                  }
+                )
+              ),
             ],
           ),
         ),
