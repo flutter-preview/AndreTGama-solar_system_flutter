@@ -1,17 +1,39 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:solar_system_app/constants.dart';
 
-class LoadingRocket extends StatelessWidget {
-  bool selected = false;
+class LoadingRocket extends StatefulWidget {
+  bool active = false;
 
-  LoadingRocket({
-    this.selected = false,
-    super.key  
-  });
+  LoadingRocket({this.active = false, super.key});
+
+  @override
+  State<LoadingRocket> createState() => _LoadingRocketState();
+}
+
+class _LoadingRocketState extends State<LoadingRocket> {
+  late bool isActive;
+
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      isActive = widget.active;
+    });
+    Timer.periodic(
+        const Duration(seconds: 3),
+        (_) => setState(() {
+              if (isActive) {
+                isActive = false;
+              } else {
+                isActive = true;
+              }
+            }));
+  }
+
   @override
   Widget build(BuildContext context) {
-    
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
@@ -30,8 +52,9 @@ class LoadingRocket extends StatelessWidget {
             children: <Widget>[
               Positioned(top: 0, child: Lottie.asset('lottie/space.json')),
               AnimatedAlign(
-                alignment: Alignment.bottomCenter,
-                duration: const Duration(seconds: 1),
+                alignment:
+                    isActive ? Alignment.bottomCenter : Alignment.topCenter,
+                duration: const Duration(seconds: 2),
                 curve: Curves.fastOutSlowIn,
                 child: SizedBox(
                   height: 250,
