@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Solar System',
       theme: ThemeData(),
-      home: LoadingRocket()
+      home: const WelcomeScreen()
     );
   }
 }
