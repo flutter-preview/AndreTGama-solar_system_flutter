@@ -26,7 +26,7 @@ class WelcomeScreen extends StatelessWidget {
           child: Stack(
             alignment: Alignment.center,
             children: <Widget>[
-              Positioned(top: 0, child: Lottie.asset('lottie/space.json')),
+              Positioned(top: 0, child: Lottie.asset('assets/lottie/space.json')),
               Positioned(
                 top: size.height * 0.2,
                 child: SizedBox(
@@ -66,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                                 text: const TextSpan(
                               text: '',
                               style:
-                                  TextStyle(fontSize: 18, fontFamily: 'Daruma'),
+                                  TextStyle(fontSize: 26, fontFamily: 'Daruma'),
                               children: <TextSpan>[
                                 TextSpan(
                                     text: 'V', style: TextStyle(color: Pink)),
@@ -120,7 +120,7 @@ class WelcomeScreen extends StatelessWidget {
                                 text: const TextSpan(
                               text: '',
                               style:
-                                  TextStyle(fontSize: 18, fontFamily: 'Daruma'),
+                                  TextStyle(fontSize: 26, fontFamily: 'Daruma'),
                               children: <TextSpan>[
                                 TextSpan(
                                     text: 'P', style: TextStyle(color: Pink)),
@@ -208,7 +208,7 @@ class WelcomeScreen extends StatelessWidget {
                 child: SizedBox(
                     height: 200,
                     child: SimpleShadow(
-                      child: Lottie.asset('lottie/human-space.json'),
+                      child: Lottie.asset('assets/lottie/human-space.json'),
                     )),
               ),
               Positioned(

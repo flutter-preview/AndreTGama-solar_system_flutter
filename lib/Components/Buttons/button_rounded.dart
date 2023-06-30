@@ -37,7 +37,7 @@ class ButtonRounded extends StatelessWidget {
               ),
             ],
           ),
-          width: size.width * 0.45,
+          width: size.width * 0.6,
           margin: const EdgeInsets.symmetric(vertical: 10),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(29),
@@ -46,12 +46,20 @@ class ButtonRounded extends StatelessWidget {
               onPressed: press,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  Lottie.asset('lottie/spaceship.json', height: 24),
+                  Expanded(
+                    child: SizedBox(
+                      height: 32,
+                      child: Lottie.asset(
+                        'assets/lottie/spaceship.json'
+                      ),
+                    ),
+                  ),
                   SizedBox(width: size.width * 0.01),
                   Text(
                     text,
-                    style: TextStyle(color: textColor, fontSize: 14),
+                    style: TextStyle(color: textColor, fontSize: 20),
                   ),
                 ],
               )
