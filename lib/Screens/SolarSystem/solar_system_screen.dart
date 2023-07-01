@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:solar_system_app/Components/Cards/card_comoponet.dart';
-import 'package:solar_system_app/Components/Transition/loading_rocket.dart';
 import 'package:solar_system_app/Components/background_main.dart';
 import 'package:solar_system_app/Model/PlanetsModel.dart';
 import 'package:flutter/services.dart' as rootBundle;

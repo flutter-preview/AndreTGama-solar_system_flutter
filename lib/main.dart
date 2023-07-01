@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:solar_system_app/Components/Transition/loading_rocket.dart';
-import 'package:solar_system_app/Screens/Planet/planet_screen.dart';
 import 'package:solar_system_app/Screens/Welcome/welcome_screen.dart';
 
 void main() {
