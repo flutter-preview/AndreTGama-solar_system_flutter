@@ -41,7 +41,10 @@ class SolarSystemScreen extends StatelessWidget {
             items: dataCards,
           ));
         } else {
-          return LoadingRocket();
+          return const CircularProgressIndicator(
+            value: 5,
+            semanticsLabel: 'Circular progress indicator',
+          );
         }
       },
     );
